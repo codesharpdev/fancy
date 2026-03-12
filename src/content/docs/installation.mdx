@@ -21,6 +21,23 @@ You have two options to add a component to your project:
 
 ### Using the CLI
 
+If your project does not already have a `components.json`, initialize shadcn first:
+
+<InstallTabs command="shadcn@latest init" npx />
+
+Then add the `@fancy` registry to the existing `registries` field in your `components.json`:
+
+<CodeSnippet title="components.json">
+```json
+{
+  // ...
+  "registries": {
+    "@fancy": "https://fancycomponents.dev/r/{name}.json"
+  }
+}
+```
+</CodeSnippet>
+
 To add a component using the CLI, you need to run the following command in your terminal:
 
 <InstallTabs command="shadcn add @fancy/component-name" npx />
