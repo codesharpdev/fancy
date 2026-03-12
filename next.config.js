@@ -3,6 +3,15 @@ const withMDX = require("@next/mdx")()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  async redirects() {
+    return [
+      {
+        source: "/docs",
+        destination: "/docs/introduction",
+        permanent: true,
+      },
+    ]
+  },
   images: {
     remotePatterns: [
       {
